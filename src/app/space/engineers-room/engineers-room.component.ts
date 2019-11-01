@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { OrderFormValue } from '../order-form-value';
 import { SpaceShip } from '../space-ship';
 import { SpaceShipService } from '../space-ship.service';
+import { map } from 'rxjs/operators';
 
 interface ShipType {
   label: string;
@@ -28,8 +29,10 @@ export class EngineersRoomComponent implements OnInit {
       validators: [Validators.required, Validators.min(1), Validators.max(5)]
     })
   });
-  @Output() shipProduced = new EventEmitter<SpaceShip>();
   private isProducing = false;
+  shipsCount = this.spaceShipService.hangarShips.pipe(
+    map((ships) => ships.length)
+  );
 
   constructor(private spaceShipService: SpaceShipService) { }
 
@@ -40,7 +43,6 @@ export class EngineersRoomComponent implements OnInit {
     this.isProducing = true;
     this.spaceShipService.produceShips(formValues)
       .subscribe({
-        next: (ship) => this.shipProduced.emit(ship),
         complete: () => this.isProducing = false
       });
   }
