@@ -14,8 +14,8 @@ import { BlackHoleComponent } from './black-hole/black-hole.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     SpaceModule,
+    AppRoutingModule,
     A2sCommModule,
     HttpClientModule
   ],
