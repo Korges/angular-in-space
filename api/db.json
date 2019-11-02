@@ -18,5 +18,16 @@
       "lastName": "Ahathon",
       "imageUrl": "/assets/chan.jpeg"
     }
+  ],
+  "forbidden-names": [
+    {
+      "name": "Maruda"
+    },
+    {
+      "name": "Ciamajda"
+    },
+    {
+      "name": "Gapcio"
+    }
   ]
 }
