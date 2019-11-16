@@ -1,0 +1,15 @@
+<form #form="ngForm" (ngSubmit)="orderPhotos(form.value)">
+  <div class="control-group">
+    <label class="control-label">API key:</label>
+    <input type="text" name="apiKey" ngModel required>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label">User ID:</label>
+    <input type="text" name="userId" ngModel required>
+  </div>
+
+  <div class="control-group">
+    <button type="submit" [disabled]="form.invalid">Hack!</button>
+  </div>
+</form>

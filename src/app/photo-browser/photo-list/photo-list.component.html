@@ -1,0 +1,6 @@
+<img *ngFor="let photo of photos | async" [src]="photo.url_l" [alt]="photo.title">
+
+<div>
+  <button *ngIf="canLoadMore | async" type="button" (click)="loadMore()">Hack More!</button>
+</div>
+

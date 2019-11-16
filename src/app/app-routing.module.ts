@@ -4,6 +4,10 @@ import { BlackHoleComponent } from './black-hole/black-hole.component';
 
 const routes: Routes = [
   {path: 'intel', loadChildren: () => import(`./intel/intel.module`).then(m => m.IntelModule)},
+  {
+    path: 'photo-browser',
+    loadChildren: () => import('./photo-browser/photo-browser.module').then((m) => m.PhotoBrowserModule)
+  },
   {path: '', redirectTo: 'space', pathMatch: 'full'},
   {path: '**', component: BlackHoleComponent}
 ];
