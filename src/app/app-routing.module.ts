@@ -8,6 +8,10 @@ const routes: Routes = [
     path: 'photo-browser',
     loadChildren: () => import('./photo-browser/photo-browser.module').then((m) => m.PhotoBrowserModule)
   },
+  {
+    path: 'planet-detector',
+    loadChildren: () => import('./planet-detector/planet-detector.module').then((m) => m.PlanetDetectorModule)
+  },
   {path: '', redirectTo: 'space', pathMatch: 'full'},
   {path: '**', component: BlackHoleComponent}
 ];

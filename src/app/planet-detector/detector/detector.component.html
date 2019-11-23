@@ -1,0 +1,12 @@
+<h1>Planet detector</h1>
+<div #gameElement class="game">
+  <div class="planet" [style.left.px]="targetPosition.x" [style.top.px]="targetPosition.y"></div>
+  <div class="noise" [style.opacity]="noiseOpacity"></div>
+  <hr class="vertical" [style.left.px]="currentPosition.x">
+  <hr class="horizontal" [style.top.px]="currentPosition.y">
+  <div *ngIf="isDetected" class="detected-message">Wykryto planetę!</div>
+  <div class="surface"
+       (click)="detect()"
+       (mousemove)="update({x: $event.offsetX, y: $event.offsetY})"></div>
+</div>
+
