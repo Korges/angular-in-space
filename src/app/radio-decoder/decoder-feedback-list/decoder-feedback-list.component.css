@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  background-color: rgba(0,0,0,0.4);
+  margin: 4px 0;
+  padding: 2px;
+}
+
+p {
+  display: inline-block;
+  margin: 4px 20px;
+}
+
+span {
+  margin-left: 10px;
+  color: white;
+  letter-spacing: 12px;
+}

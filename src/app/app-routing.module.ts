@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'planet-detector',
     loadChildren: () => import('./planet-detector/planet-detector.module').then((m) => m.PlanetDetectorModule)
   },
+  {
+    path: 'radio',
+    loadChildren: () => import('./radio-decoder/radio-decoder.module').then((m) => m.RadioDecoderModule)
+  },
   {path: '', redirectTo: 'space', pathMatch: 'full'},
   {path: '**', component: BlackHoleComponent}
 ];

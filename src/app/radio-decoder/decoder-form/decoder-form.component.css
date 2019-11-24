@@ -1,0 +1,13 @@
+.error p, .error li {
+  color: red;
+  margin: 0;
+}
+
+input {
+  font-size: x-large;
+  letter-spacing: 12px;
+}
+
+button {
+  font-size: x-large;
+}

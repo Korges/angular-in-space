@@ -1,0 +1,11 @@
+<form #form="ngForm" (ngSubmit)="decode(form.value.key)">
+  <input type="text" ngModel name="key" [pattern]="keyPattern" required autocomplete="off">
+  <button type="submit" [disabled]="form.invalid">Dekoduj</button>
+  <div class="error" *ngIf="form.invalid && form.dirty">
+    <p>Niepoprawny format klucza.</p>
+    <ul>
+      <li>Wymagana długość to {{keyLength}}</li>
+      <li>Dozwolone znaki to {{keyChars}}.</li>
+    </ul>
+  </div>
+</form>

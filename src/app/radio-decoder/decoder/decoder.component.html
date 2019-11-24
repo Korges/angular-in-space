@@ -1,0 +1,13 @@
+<div class="decoder-section">
+  <h2>Deszyfrator fal radiowych</h2>
+  <app-decoder-form *ngIf="!completed"></app-decoder-form>
+</div>
+<div class="decoder-section">
+  <h2>Status
+    <span *ngIf="completed; else incompletedNode" class="status status-completed">rozkodowany</span>
+    <ng-template #incompletedNode>
+      <span class="status status-incompleted">zakodowany</span>
+    </ng-template>
+  </h2>
+  <app-decoder-feedback-list></app-decoder-feedback-list>
+</div>

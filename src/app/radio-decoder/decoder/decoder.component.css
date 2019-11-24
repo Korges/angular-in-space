@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+}
+
+.decoder-section {
+  flex: 1;
+}
+
+.status {
+  margin-left: 20px;
+  color: white;
+  display: inline-block;
+  padding: 4px;
+}
+
+.status.status-incompleted {
+  background-color: darkred;
+  border: 2px solid red;
+}
+
+.status.status-completed {
+  background-color: darkgreen;
+  border: 2px solid lawngreen;
+}

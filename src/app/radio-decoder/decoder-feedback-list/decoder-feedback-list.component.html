@@ -1,0 +1,4 @@
+<app-decoder-feedback-item *ngFor="let decoderResult of decoderResults | async; index as index; count as count"
+                           [result]="decoderResult"
+                           [index]="count - index"></app-decoder-feedback-item>
+<p *ngIf="(decoderResultsCount | async) === 0">Wprowadź kod dekodujący.</p>

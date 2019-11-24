@@ -1,0 +1,6 @@
+<p class="key">
+  #{{index}}: <span>{{result.key}}</span>
+</p>
+<app-decoder-light color="green" *ngFor="let i of result.correctPositionCount | numberToArray"></app-decoder-light>
+<app-decoder-light color="orange" *ngFor="let i of result.correctOccurrenceCount | numberToArray"></app-decoder-light>
+<app-decoder-light color="red" *ngFor="let i of result.incorrectCount | numberToArray"></app-decoder-light>
